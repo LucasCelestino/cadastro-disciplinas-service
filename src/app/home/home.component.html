@@ -2,5 +2,6 @@
 <div>
   <input type="number" [(ngModel)]="ms" />
   <button type="submit" (click)="startTemporizador()">Iniciar</button>
+  <button type="submit" (click)="stopTemporizador()">Parar</button>
 </div>
 {{ temporizador.getCount() }}

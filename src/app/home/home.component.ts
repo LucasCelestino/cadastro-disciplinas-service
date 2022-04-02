@@ -18,4 +18,8 @@ export class HomeComponent implements OnInit {
   startTemporizador() {
     this.temporizador.start(this.ms);
   }
+
+  stopTemporizador() {
+    this.temporizador.stop();
+  }
 }
