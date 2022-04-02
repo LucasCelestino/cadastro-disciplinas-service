@@ -7,9 +7,15 @@ import { TemporizadorService } from '../temporizador.service';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
+  ms: number;
+
   constructor(public temporizador: TemporizadorService) {
-    this.temporizador.start(1000);
+    this.ms = 0;
   }
 
   ngOnInit() {}
+
+  startTemporizador() {
+    this.temporizador.start(this.ms);
+  }
 }
