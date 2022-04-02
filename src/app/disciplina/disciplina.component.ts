@@ -3,13 +3,10 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-disciplina',
   templateUrl: './disciplina.component.html',
-  styleUrls: ['./disciplina.component.css']
+  styleUrls: ['./disciplina.component.css'],
 })
 export class DisciplinaComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }
