@@ -8,7 +8,7 @@ import { DisciplinaService } from '../disciplina.service';
 })
 export class DisciplinaComponent implements OnInit {
   disciplinas: Array<any>;
-  disciplinaInput: string;
+  disciplinaInput;
 
   constructor(public disciplinasService: DisciplinaService) {
     this.disciplinas = disciplinasService.getDisciplinas();
