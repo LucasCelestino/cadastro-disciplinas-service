@@ -8,6 +8,7 @@ import { HelloComponent } from './hello.component';
 import { HomeComponent } from './home/home.component';
 import { DisciplinaComponent } from './disciplina/disciplina.component';
 import { TemporizadorService } from './temporizador.service';
+import { DisciplinaService } from './disciplina.service';
 
 @NgModule({
   imports: [
@@ -20,6 +21,6 @@ import { TemporizadorService } from './temporizador.service';
   ],
   declarations: [AppComponent, HelloComponent],
   bootstrap: [AppComponent],
-  providers: [TemporizadorService],
+  providers: [TemporizadorService, DisciplinaService],
 })
 export class AppModule {}
