@@ -8,6 +8,7 @@ import { DisciplinaService } from '../disciplina.service';
 })
 export class DisciplinaComponent implements OnInit {
   disciplinas: Array<any>;
+  disciplinaInput: string;
 
   constructor(public disciplinasService: DisciplinaService) {
     this.disciplinas = disciplinasService.getDisciplinas();
@@ -16,6 +17,14 @@ export class DisciplinaComponent implements OnInit {
 
   getDisciplinas() {
     return this.disciplinas;
+  }
+
+  removerDisciplina(disciplina) {
+    this.disciplinasService.remove(this.disciplinas.indexOf(disciplina, 0));
+  }
+
+  adicionarDisciplina() {
+    this.disciplinasService.add(this.disciplinaInput);
   }
 
   ngOnInit() {}

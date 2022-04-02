@@ -17,7 +17,7 @@ export class DisciplinaService {
     return this.disciplinas;
   }
 
-  add(id: number, nome: string) {
+  add(nome: string) {
     this.disciplinas.push({ nome });
   }
 

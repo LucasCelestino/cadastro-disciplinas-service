@@ -1,9 +1,15 @@
 <h2>Lista de Disciplinas</h2>
 <div>
   <p>Digite um nome para a disciplina.</p>
-  <input type="text" />
+  <input type="text" [(ngModel)]="disciplinaInput" />
   <button type="submit">Adicionar</button>
 </div>
 
-<div id="wrapper" *ngFor="let disciplina of getDisciplinas()">
-</div>
+<table>
+  <tr *ngFor="let disciplina of getDisciplinas()">
+    <td>
+      {{ disciplina.nome }}
+      <button (click)="removerDisciplina(disciplina)">Remover</button>
+    </td>
+  </tr>
+</table>
