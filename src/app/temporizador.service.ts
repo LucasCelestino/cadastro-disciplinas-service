@@ -1,9 +1,11 @@
 import { Injectable } from '@angular/core';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root',
+})
 export class TemporizadorService {
   timer: any;
-  counter: number;
+  counter = 0;
 
   constructor() {}
 
